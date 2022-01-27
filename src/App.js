@@ -1,13 +1,15 @@
-import ParentClass from "./component/Parent/ClassParent";
-import FuncParent from "./component/Parent/FuncParent";
-
+import PassData from "./pages/passData/index";
+import Hook from "./pages/hook/index";
+import { Routes, Route } from "react-router-dom";
 import "./styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <ParentClass></ParentClass>
-      <FuncParent></FuncParent>
+      <Routes>
+        <Route path="/passData" element={<PassData />} />
+        <Route path="/hook" element={<Hook />} />
+      </Routes>
     </div>
   );
 }
