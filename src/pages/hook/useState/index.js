@@ -4,6 +4,7 @@ export default function UseStateHook() {
   const [count, setCount] = useState(0);
   return (
     <div>
+      <h6>useState</h6>
       <p>You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>

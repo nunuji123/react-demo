@@ -9,6 +9,7 @@ export default function UseStateHook() {
   });
   return (
     <div>
+      <h6>useEffect</h6>
       <p>You clicked {count} times</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
