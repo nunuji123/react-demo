@@ -1,4 +1,5 @@
 module.exports = {
+  parser: "@babel/eslint-parser",
   plugins: ["react-hooks"],
   rules: {
     "react-hooks/rules-of-hooks": "error", // 检查 Hook 的规则
