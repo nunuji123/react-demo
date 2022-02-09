@@ -35,7 +35,14 @@ export default function App() {
 function ThemedButton() {
   const theme = useContext(ThemeContext);
   return (
-    <Button style={{ background: theme.background, color: theme.foreground }}>
+    <Button
+      privateStyle={{
+        background: theme.background,
+        color: theme.foreground,
+        width: "auto",
+        padding: "3px"
+      }}
+    >
       I am styles by theme context
     </Button>
   );
