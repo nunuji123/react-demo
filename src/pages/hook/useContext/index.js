@@ -1,15 +1,42 @@
-import React, { useState, useEffect, useContext } from "react";
-export default function UseContextHook() {
-  // 声明一个叫count的state变量
-  const [count, setCount] = useState(0);
-  // 相当于 componentDidMount componentDidUpdate componentWillUnmount
-  useEffect(() => {
-    // 使用浏览器的API更新页面标题
-    document.title = `You clicked ${count} times`;
-  });
+/**
+ * 调用了 useContext 的组件总会在 context 值变化时重新渲染
+ */
+import React, { useContext, createContext } from "react";
+import Button from "../../../component/Button";
+
+const themes = {
+  light: {
+    foreground: "#000000",
+    background: "#eeeeee"
+  },
+  dark: {
+    foreground: "#ffffff",
+    background: "#222222"
+  }
+};
+
+const ThemeContext = createContext(themes.light);
+
+function Toolbar(props) {
   return (
     <div>
-      <h6>UseContextHook</h6>
+      <ThemedButton />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeContext.Provider value={themes.dark}>
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+function ThemedButton() {
+  const theme = useContext(ThemeContext);
+  return (
+    <Button style={{ background: theme.background, color: theme.foreground }}>
+      I am styles by theme context
+    </Button>
   );
 }
