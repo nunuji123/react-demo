@@ -6,17 +6,18 @@ import React, { createContext, Component } from "react";
 import Button from "../../component/Button";
 
 const ThemeContext = createContext("light");
+console.log("ThemeContext", ThemeContext);
 
 function Toolbar(props) {
   return (
     <div>
-      <ThemeButton></ThemeButton>
+      <ThemedButton></ThemedButton>
     </div>
   );
 }
 
-class ThemeButton extends React.Component {
-  static context = ThemeContext;
+class ThemedButton extends React.Component {
+  static contextType = ThemeContext;
   render() {
     return <Button theme={this.context}></Button>;
   }
