@@ -5,7 +5,7 @@ import ContextPage from "./pages/context/";
 import { Routes, Route } from "react-router-dom";
 import "./styles.css";
 
-export default function App() {
+export default function App () {
   return (
     <div className="App">
       <Routes>
