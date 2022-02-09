@@ -4,7 +4,8 @@
   "description": "react 功能demo实例",
   "keywords": [
     "react-demo",
-    "react"
+    "react",
+    "hook"
   ],
   "main": "src/index.js",
   "dependencies": {
