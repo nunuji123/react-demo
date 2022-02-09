@@ -1,8 +1,9 @@
 import Index from "./pages/index/";
-import PassData from "./pages/passData/index";
 import Hook from "./pages/hook/index";
 import ContextPage from "./pages/context/";
 import DomPage from "./pages/dom";
+import ClassPropsPage from "./pages/props/class/parent";
+import FuncPropsPage from "./pages/props/func/parent";
 import { Routes, Route } from "react-router-dom";
 import "./styles.css";
 
@@ -12,9 +13,10 @@ export default function App () {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/dom" element={<DomPage />} />
-        <Route path="/passData" element={<PassData />} />
         <Route path="/hook" element={<Hook />} />
-        <Route path="/Context" element={<ContextPage />} />
+        <Route path="/context" element={<ContextPage />} />
+        <Route path="/props/func" element={<FuncPropsPage />} />
+        <Route path="/props/class" element={<ClassPropsPage />} />
       </Routes>
     </div>
   );
