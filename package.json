@@ -2,16 +2,14 @@
   "name": "react-demo",
   "version": "1.0.0",
   "description": "react 功能demo实例",
-  "keywords": [
-    "react-demo",
-    "react",
-    "hook"
-  ],
+  "keywords": ["react-demo", "react", "hook"],
   "main": "src/index.js",
   "dependencies": {
+    "customize-cra": "1.0.0",
     "eslint-plugin-react-hooks": "4.3.0",
     "materialize-css": "1.0.0",
     "react": "17.0.2",
+    "react-app-rewired": "2.1.11",
     "react-dom": "17.0.2",
     "react-router-dom": "6.2.1",
     "react-scripts": "4.0.0"
@@ -21,15 +19,10 @@
     "typescript": "4.1.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PROT=3000 react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
