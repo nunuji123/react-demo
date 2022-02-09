@@ -9,7 +9,6 @@
   ],
   "main": "src/index.js",
   "dependencies": {
-    "customize-cra": "1.0.0",
     "eslint-plugin-react-hooks": "4.3.0",
     "materialize-css": "1.0.0",
     "react": "17.0.2",
@@ -18,7 +17,11 @@
     "react-scripts": "4.0.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "@babel/preset-react": "^7.16.7",
     "@babel/runtime": "7.13.8",
+    "customize-cra": "^1.0.0",
     "react-app-rewired": "^2.1.11",
     "typescript": "4.1.3"
   },
