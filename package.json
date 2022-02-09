@@ -2,7 +2,10 @@
   "name": "react-demo",
   "version": "1.0.0",
   "description": "react 功能demo实例",
-  "keywords": [],
+  "keywords": [
+    "react-demo",
+    "react"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "eslint-plugin-react-hooks": "4.3.0",
