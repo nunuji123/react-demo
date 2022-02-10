@@ -3,7 +3,7 @@ import Hook from "./pages/hook/index";
 import ContextPage from "./pages/context/";
 import DomPage from "./pages/dom";
 import MemoFuncPage from "./pages/memo/func/parent";
-import MemoPropsPage from "./pages/memo/props/parent";
+import MemoPropsPage from "./pages/memo/class/parent";
 import ClassPropsPage from "./pages/props/class/parent";
 import FuncPropsPage from "./pages/props/func/parent";
 import { Routes, Route } from "react-router-dom";
@@ -19,7 +19,7 @@ export default function App () {
         <Route path="/context" element={<ContextPage />} />
         <Route path="/memo" element={<MemoFuncPage />} />
         <Route path="/memo/func" element={<MemoFuncPage />} />
-        <Route path="/memo/props" element={<MemoPropsPage />} />
+        <Route path="/memo/class" element={<MemoPropsPage />} />
         <Route path="/props/func" element={<FuncPropsPage />} />
         <Route path="/props/class" element={<ClassPropsPage />} />
       </Routes>
