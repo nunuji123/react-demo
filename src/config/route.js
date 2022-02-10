@@ -1,61 +1,54 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+//编写基本的路由路线，path为路径，component为对应渲染的组件，exact属性决定是否精准匹配
+import Index from "../pages/index/";
+import Hook from "../pages/hook/index";
+import ContextPage from "../pages/context/";
+import DomPage from "../pages/dom";
+import MemoFuncPage from "../pages/memo/func/parent";
+import ClassPropsPage from "../pages/props/class/parent";
+import FuncPropsPage from "../pages/props/func/parent";
+
 const routes = [
   {
-    path: "/sandwiches",
-    component: Sandwiches
+    path: "/",
+    component: Index,
   },
   {
-    path: "/tacos",
-    component: Tacos,
-    routes: [
-      {
-        path: "/tacos/bus",
-        component: Bus
-      },
-      {
-        path: "/tacos/cart",
-        component: Cart
-      }
-    ]
-  }
+    path: "/dom",
+    component: DomPage,
+  },
+  // {
+  //   path: "/dom",
+  //   component: DomPage,
+  // },
+  // {
+  //   path: "/hook",
+  //   component: Hook,
+  // },
+  // {
+  //   path: "/props/func",
+  //   component: FuncPropsPage,
+  // },
+  // {
+  //   path: "/props/class",
+  //   component: ClassPropsPage,
+  // },
+  // {
+  //   path: "/context",
+  //   component: ContextPage,
+  // },
+  // {
+  //   path: "/memo",
+  //   component: MemoFuncPage,
+  // },
+  // {
+  //   path: "/memo/func",
+  //   component: MemoFuncPage,
+  // },
+  // {
+  //   path: "/memo/class",
+  //   component: MemoFuncPage,
+  // },
 ];
 
-export default function RouteConfigExample() {
-  return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/tacos">Tacos</Link>
-          </li>
-          <li>
-            <Link to="/sandwiches">Sandwiches</Link>
-          </li>
-        </ul>
-
-        <Switch>
-          {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
-          ))}
-        </Switch>
-      </div>
-    </Router>
-  );
-}
-
-function RouteWithSubRoutes(route) {
-  return (
-    <Route
-      path={route.path}
-      render={(props) => (
-        // pass the sub-routes down to keep nesting
-        <route.component {...props} routes={route.routes} />
-      )}
-    />
-  );
-}
-
-function Sandwiches() {
-  return <h2>Sandwiches</h2>;
-}
+//将路由表数组导出
+export default routes;

@@ -9,4 +9,5 @@ function ChildFunc (props) {
     );
 }
 
+//使用 React.memo包裹 函数组件后，父组件（Parent）的props的更新不会导致子组件（Child）的更新
 export default React.memo(ChildFunc)
