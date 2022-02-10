@@ -1,12 +1,8 @@
 {
-  "name": "react-demo",
+  "name": "github-react-demo",
   "version": "1.0.0",
-  "description": "react 功能demo实例",
-  "keywords": [
-    "react-demo",
-    "react",
-    "hook"
-  ],
+  "description": "react 功能",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "eslint-plugin-react-hooks": "4.3.0",
