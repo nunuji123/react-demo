@@ -1,5 +1,8 @@
+/**
+ * tailwind https://tailwindcss.com/docs/installation
+ */
 module.exports = {
-  content: [],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
   },
