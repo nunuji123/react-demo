@@ -10,7 +10,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "4.0.0"
+    "react-scripts": "4.0.0",
+    "sass": "^1.49.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.17.0",
@@ -30,7 +31,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "watch:css": "postcss src/styles.css -o src/dist/styles.css"
+    "watch:css": "postcss src/styles.scss -o src/dist/styles.css"
   },
   "browserslist": [
     ">0.2%",
