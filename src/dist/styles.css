@@ -431,10 +431,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
+
 .App {
   font-family: sans-serif;
   text-align: center;
 }
+
 button {
   width: auto;
 }
