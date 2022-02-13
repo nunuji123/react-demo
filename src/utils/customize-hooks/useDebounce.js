@@ -1,20 +1,19 @@
-import { useEffect, useRef } from "react";
+import { useRef, useCallback, useEffect } from 'react'
+export default function useDebounce(fn, delay, dep = []) {
+	const { current } = useRef({ fn, timer: null })
+	useEffect(
+		function() {
+			current.fn = fn
+		},
+		[fn]
+	)
 
-const useDebounce = (fn, ms = 30, deps = []) => {
-  let timer = useRef();
-  useEffect(() => {
-    if (timer.current) {
-      console.log(`current exist`);
-      clearTimeout(timer);
-    }
-    timer.current = setTimeout(() => {
-      fn();
-    }, ms);
-  }, deps);
-  const cancel = () => {
-    clearTimeout(timer.current);
-    timer = null;
-  };
-  return [cancel];
-};
-export default useDebounce;
+	return useCallback(function f(...args) {
+		if (current.timer) {
+			clearTimeout(current.timer)
+		}
+		current.timer = setTimeout(() => {
+			current.fn.call(this, ...args)
+		}, delay)
+	}, dep)
+}
