@@ -5,6 +5,8 @@ import Index from "../pages/index/";
 import Hook from "../pages/hook/index";
 import ContextPage from "../pages/context/";
 import DomPage from "../pages/dom";
+import HocPage from "../pages/hoc";
+import RefsPage from "../pages/refs";
 import MemoFuncPage from "../pages/memo/func/parent";
 import MemoPropsPage from "../pages/memo/class/parent";
 import ClassPropsPage from "../pages/props/class/parent";
@@ -55,6 +57,14 @@ let routes = [
       {
         path: "/context",
         element: <ContextPage />,
+      },
+      {
+        path: "/refs",
+        element: <RefsPage />,
+      },
+      {
+        path: "/hoc",
+        element: <HocPage />,
       },
       { path: "*", element: <NoMatch /> },
     ],

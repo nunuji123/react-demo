@@ -25,6 +25,14 @@ const navBarsArray = [
     path: "/customize-hooks/useDebounce",
     content: "customize-hooks",
   },
+  {
+    path: "/refs",
+    content: "refs",
+  },
+  {
+    path: "/hoc",
+    content: "hoc",
+  },
 ];
 
 export default function Layout() {
