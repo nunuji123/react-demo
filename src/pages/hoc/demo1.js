@@ -18,4 +18,3 @@ function HOC(Component) {
 const newIndex = HOC(Index)
 
 export default newIndex
-console.log('newIndex.say:', newIndex.say) // undefined

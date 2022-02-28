@@ -5,9 +5,7 @@ function classHOC(WrapComponent) {
 		state = {
 			name: 'alien',
 		}
-		componentDidMount() {
-			console.log('HOC')
-		}
+		componentDidMount() {}
 		render() {
 			return <WrapComponent {...this.props} {...this.state} />
 		}

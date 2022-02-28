@@ -6,7 +6,6 @@ import React, { createContext, Component } from "react";
 import Button from "../../component/Button";
 
 const ThemeContext = createContext("light");
-console.log("ThemeContext", ThemeContext);
 
 function Toolbar(props) {
   return (

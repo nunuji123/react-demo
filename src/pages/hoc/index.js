@@ -7,8 +7,7 @@ import Demo1Page from './demo1'
 import Demo2Page from './demo2'
 import Demo3Page from './demo3'
 import HocProps from './hoc_props'
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom'
 
 function logProps(WrappedComponent) {
 	return class extends React.Component {
@@ -45,10 +44,15 @@ function pureDivElement() {
 
 export default function HocPage() {
 	const ele = withSubscription(pureDivElement)
-	console.log('ele :>> ', ele)
 	return (
 		<React.Fragment>
 			<h1>高阶组件</h1>
+			<ul>
+				<li>Hoc 是纯函数 没有副作用</li>
+				<li>
+					不要试图在 HOC 中修改组件原型（或以其他方式改变它）,而应该使用组合
+				</li>
+			</ul>
 			<div className='demos'>
 				<ul>
 					<li>
@@ -92,14 +96,6 @@ export default function HocPage() {
 					</li>
 				</ul>
 			</div>
-
-			<ul>
-				<li>Hoc 是纯函数 没有副作用</li>
-				<li>
-					不要试图在 HOC 中修改组件原型（或以其他方式改变它）,而应该使用组合
-				</li>
-			</ul>
-			<div className='demo1'>{}</div>
 		</React.Fragment>
 	)
 }
